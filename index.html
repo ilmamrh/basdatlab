@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="logo"><a href=""></a></div>
+          <h2>Register Become a Member</h2>
+          <p>Ready for join? Please fill the following registration form to become a member of Database Laboratory</p>
+          <hr>
+          <h3>Terms and Conditions</h3>
+          <p>Please, read the terms and conditions below<br><b>before</b> filling out the form</p>
+          <button class="btn btn-primary"><b>LOOK INSIDE</b></button>
+          <p id="additionalTaskTitle">Additional Task</p>
+          <div class="additionalTaskContainer">
+            <button class="btn btn-primary">BIG DATA</button>
+            <button class="btn btn-primary">SPATIAL</button>
+            <button class="btn btn-primary">PRODUCT</button>
+          </div>
+        </div>
+        <div class="col-md-6" style="overflow: scroll; height: 100vh">
+          <form id="comment_form" class="form" method="POST" action="/submission" enctype="multipart/form-data">
+            <div class="form-group"><label for="example-text-input">Nama Lengkap</label><input class="form-control input-form" type="text" id="nama" name="nama"></div>
+            <div class="form-group"><label for="example-email-input">Email</label><input type="email" class="form-control input-form" id="email" name="email"></div>
+            <div class="form-group"><label for="example-text-input">NIM</label><input class="form-control input-form" type="text" id="nim" name="nim"></div>
+            <div class="form-group"><label for="example-text-input">Nomor HP</label><input class="form-control input-form" type="text" id="hp" name="hp"></div>
+            <div class="form-group"><label for="example-text-input">ID Line</label><input class="form-control input-form" type="text" id="line" name="line"></div>
+            <div class="form-group"><label for="example-text-input">Jurusan</label><input class="form-control input-form" type="text" id="jurusan" name="jurusan"></div>
+            <div class="form-group">
+               <label for="example-text-input" class="col-form-label" required>Angkatan</label>
+               <select class="col-md-12 select-style-form" type="text" id="angkatan" name="angkatan">
+                  <div class="col-10">
+                     <option selected="selected" value disabled="disabled">Select One</option>
+                     <option>2015</option>
+                     <option>2016</option>
+                     <option>2017</option>
+                  </div>
+               </select>
+            </div>
+            <br><br>
+            <div class="topikContainer">
+               <div class="flexItem">
+                  <label for="topik1" class="group-pilihan" required>Pilihan Group Pertama</label>
+                  <select class="select-style-form" type="text" id="topik1" name="topik1">
+                     <option selected="selected" value disabled="disabled">Select One</option>
+                     <option id="bigdata">Big Data</option>
+                     <option id="spatialdatabase">Spatial Database</option>
+                     <option id="product">Product</option>
+                  </select>
+               </div>
+               <div class="flexItem">
+                  <label for="topik1" class="group-pilihan" required>Persentase Minat</label>
+                  <select class="select-style-form" type="text" id="minat1" name="minat1">
+                     <option selected="selected" value disabled="disabled">Besar Minatmu</option>
+                     <option>100%</option>
+                     <option>90%</option>
+                     <option>80%</option>
+                     <option>70%</option>
+                     <option>60%</option>
+                  </select>
+               </div>
+               <p style="margin-top:1em;margin-bottom:1em"><b>Note:</b> Persentase yang dimaksud adalah presentase minat kamu untuk bergabung pada group pertama</p>
+            </div>
+            <div class="topikContainer">
+               <div class="flexItem">
+                  <label for="topik2" class="group-pilihan" required>Pilihan Group Kedua</label>
+                  <select class="select-style-form" type="text" id="topik2" name="topik2" disabled="disabled">
+                     <option selected="selected" value disabled="disabled">Select One</option>
+                     <option id="bigdata2">Big Data</option>
+                     <option id="spatialdatabase2">Spatial Database</option>
+                     <option id="product2">Product</option>
+                  </select>
+               </div>
+               <div class="flexItem"><label for="minat2" class="group-pilihan" name="pilihan" required>Persentase Minat</label><input type="text" class="input-form form-control" id="minat2" disabled="disabled" value="0%"></div>
+               <p style="padding-top:1em;padding-bottom:1em"><b>Note:</b> Persentase untuk pilihan group kedua yaitu <b>sisa</b> dari Persentase minat kamu pada pilihan group pertama</p>
+            </div>
+            <div class="form-group">
+               <label for="example-text-input" class="col-form-label">Motivasi</label>
+               <textarea rows="4" cols="50" class="form-control input-form" type="textarea" id="motivasi" name="motivasi" required> </textarea>
+               <p style="padding-top:1em"><b>Note:</b> Ceritakan apa alasanmu ingin gabung dengan lab basdat dan apa yang kamu dapat dari "additional task" yang telah kamu kerjakan</p>
+            </div>
+            <div class="form-group"><label for="exampleInputFile">FOTO BEBAS PORTRAIT</label><input type="file" class="form-control" id="foto" aria-describedby="fileHelp" name="foto" accept="image/*" required></div>
+            <p><b>Note:</b> Pastikan file Foto kurang dari 500KB dan dalam <b>format</b> JPG/JPEG/PNG</p>
+            <div class="form-group"><label for="exampleInputFile">KHS</label><input type="file" class="form-control" id="khs" aria-describedby="fileHelp" name="khs" accept=".pdf" required></div>
+            <p><b>Note:</b> Pastikan file KHS kurang dari 500KB dan dalam <b>format</b> .pdf</p>
+            <div class="form-group"><label for="cv">CV</label><input type="file" class="form-control" id="cv" aria-describedby="fileHelp" name="cv" accept=".pdf" required></div>
+            <p><b>Note:</b> Pastikan file CV kurang dari 500KB dan dalam <b>format</b> .pdf</p>
+            <div class="form-group"><label for="exampleInputFile">SCREENSHOT HASIL LIKE & SHARE</label><input id="screenshot" type="file" class="form-control" aria-describedby="fileHelp" name="screenshot" accept=".doc, .docx" required></div>
+            <p><b>Note:</b> Semua screenshot dimasukkan kedalam <b>1 file word</b>, pastikan kurang dari 500KB dan dalam <b>format</b> .doc atau .docx</p>
+            <div class="form-group"><label for="essay" id="labelEssay">ADDITIONAL TASK</label><input type="file" class="form-control" id="essay" aria-describedby="fileHelp" name="essay" required accept=".zip, .rar, .pdf"></div>
+            <p id="noteEssay1"><b>Note:</b> Pastikan file kurang dari 500KB</p>
+            <div id="formEssay2">
+               <div class="form-group"><label for="essay2" id="labelEssay2">ADDITIONAL TASK</label><input type="file" class="form-control" id="essay2" aria-describedby="fileHelp" name="essay2" accept=".zip, .rar, .pdf"></div>
+               <p id="noteEssay2"><b>Note:</b> Harap pilih topik kedua, jika tidak berminat, minat topik pertama isi 100%</p>
+            </div>
+            <br>
+            <div class="form-group">
+               <div class="g-recaptcha" data-sitekey="6LcJ7EIUAAAAAPS3IjyjcAJzQsADvca8QCpzEp6t"></div>
+            </div>
+            <p><b>Note:</b> Setelah SUBMIT, harap bertanya kepada OA line kami: @basisdatalab untuk memastikan berkasmu sudah terkumpul :)</p>
+            <input type="text" style="display:none" id="date" name="date">
+            <button id="submitForm" type="submit" class="btn btn-block btn-primary Rectangle-nav" value="Post comment">REGISTER NOW</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
